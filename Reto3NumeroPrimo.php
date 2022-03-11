@@ -18,15 +18,41 @@
  *
  */
 
+ /**
+  * Funciona pero a partir del numero 23 el algoritmo da error, entiendo que por la enorme cantidad de numeros
+  * y no se interpretar otra formula matematica para comprobar si el numero es primo
+  *
+  * Buscando encuentro un algoritmo que saca si un numero es primo o no, y lo adapto
+  */
+
 
 
 
 function isPrime($num){
 
+    $cont = 0;
+    
+    for ($i=1; $i <= $num; $i++) {
+       if ($num % $i==0) {
+
+           $cont = $cont + 1;
+        
+        }
+    }
+    if ($cont==2){ 
+        
+        printf($num. ' ');
+
+    }else{
+        
+        echo '* ';
+
+    }
+    /*
     $storage = $num;
     $solution = 1;
     $num--;
-
+    
     for($i=1;$i<$storage;$i++){
 
         $solution *= $num;
@@ -44,17 +70,17 @@ function isPrime($num){
     
     }else{
 
-        echo '*';
+        echo '* ';
 
     }
-
+    */
 }
 
 function printPrimes($num){
 
     $storage = $num;
 
-    for($i=0;$i<=$storage; $i++){
+    for($i=0;$i<$storage; $i++){
 
         isPrime($num);
 
