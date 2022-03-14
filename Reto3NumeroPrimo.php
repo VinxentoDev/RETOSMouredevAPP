@@ -25,9 +25,9 @@
   * Buscando encuentro un algoritmo que saca si un numero es primo o no, y lo adapto
   */
 
+require_once 'isPrime.php';
 
-
-
+/*
 function isPrime($num){
 
     $cont = 0;
@@ -73,9 +73,13 @@ function isPrime($num){
         echo '* ';
 
     }
-    */
+    
 }
 
+Al final mientras espero la comida en casa de la suegra, me programo un isPrime() en el movil y funciona 100% bien
+Me ayudo mucho a darle una vuelta el hecho de que, Moure leyese despacio el enunciado varias veces. 
+Me ayudo a verlo con perspectiva y a buscar soluciones
+*/
 function printPrimes($num){
 
     $storage = $num;
