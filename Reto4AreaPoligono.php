@@ -21,3 +21,36 @@
  */
 
 // esto es una prueba de git push
+
+function areaPoligon($width, $heigh){
+
+    $poligon = readline('Por favor, introduce tu poligono sin tildes ');
+
+    strtolower($poligon);
+
+    if($poligon==='triangulo'){
+
+        $area = ($width * $heigh)/2;
+
+        printf("El area del triangulo es $area");
+
+    }elseif($poligon==='cuadrado'){
+
+        $area = $width * $heigh;
+
+        printf("El area del cuadrado es $area");
+
+    }elseif($poligon==='rectangulo'){
+
+        $area = $width * $heigh;
+
+        printf("El area del rectangulo es $area");
+
+
+    }else{
+
+        printf('Error, el poligono no esta bien escrito o no esta en la base de datos.');
+
+    }
+
+}
