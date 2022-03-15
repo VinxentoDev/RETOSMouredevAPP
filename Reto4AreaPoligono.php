@@ -24,9 +24,9 @@
 
 function areaPoligon($width, $heigh){
 
-    $poligon = readline('Por favor, introduce tu poligono sin tildes ');
+    $poligon = readline('Por favor, introduce tu poligono sin tildes (triangulo, cuadrado o rectangulo) ');
 
-    strtolower($poligon);
+    $poligon = strtolower($poligon);
 
     if($poligon==='triangulo'){
 
@@ -54,3 +54,5 @@ function areaPoligon($width, $heigh){
     }
 
 }
+
+areaPoligon(30, 30);
