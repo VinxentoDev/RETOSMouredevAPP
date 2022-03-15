@@ -19,11 +19,24 @@
  *
  */
 
-// $exif = exif_read_data('mouredev_github_profile.jpg'); esta funcion devuelve todos los datos exif de un jpg, jpeg o tiff.
-// var_dump($exif);
+/*
+$exif = exif_read_data('mouredev_github_profile.jpg'); esta funcion devuelve todos los datos exif de un jpg, jpeg o tiff en un array
 
-$size = getimagesize('mouredev_github_profile.jpg');
+intval() pasa a int el numero
 
-$aspect_ratio = $size[0] / $size[1];
+*/
 
-var_dump($aspect_ratio);
+function gcd($a,$b) {
+    return ($a % $b) ? gcd($b,$a % $b) : $b;
+}
+
+/* Funcion gcd (de internet) saca el maximo comun divisor (great common divisor) con un if en una sola linea.
+getimagesize coge en un array las dimensiones de una imagen, para coger la imagen de una url tiene que ir en dobles comillas ""
+*/
+$size = getimagesize("https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png");
+
+$gcd = gcd($size[0], $size[1]);
+
+$aspect_ratio = $size[0]/$gcd .' : '. $size[1]/$gcd;
+
+echo $aspect_ratio;
